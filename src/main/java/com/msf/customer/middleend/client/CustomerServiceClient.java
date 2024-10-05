@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient( url = "${microservices.url}/api/v1/customer-service/customers" ,name = "customer-service")  //permite establecer al servicio que nos vamos a comunicar
+@FeignClient( url = "${microservices.url}/api/v1/customer-service/customer" ,name = "customer-service")  //permite establecer al servicio que nos vamos a comunicar
 public interface CustomerServiceClient {
 
     @PostMapping
