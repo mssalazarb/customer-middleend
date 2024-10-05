@@ -4,7 +4,7 @@ WORKDIR /home/gradle/src/producer
 RUN gradle build --no-daemon --stacktrace -x test
 
 FROM openjdk:22-bullseye
-EXPOSE 8086
+EXPOSE 8081
 ARG JAR_FILE=build/libs/*.jar
 COPY --from=build /home/gradle/src/producer/build/libs/*.jar /home/app.jar
 ENV SPRING_PROFILES_ACTIVE=default
